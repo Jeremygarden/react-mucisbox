@@ -1,0 +1,16 @@
+.music-panel {
+  background: linear-gradient(
+    0deg,
+    rgba($black, 1) 0%,
+    rgba($dark-gray, 1) 100%
+  );
+  width: 80%;
+}
+
+.panel {
+  padding: 30px;
+  &-title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
