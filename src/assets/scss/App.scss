@@ -1,8 +1,4 @@
 @import "./setting.scss";
-
-.app {
-  background-color: $black;
-  color: $white;
-  height: 100%;
-  width: 100%;
-}
+// Layout Style
+@import "./layout/header";
+@import "./layout/tab-nav";

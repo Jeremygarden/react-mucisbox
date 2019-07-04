@@ -1,6 +1,28 @@
+@import "./reset.scss";
+
 // Theme Color
 $black: #000000;
 $white: #ffffff;
 $light-gray: #919496;
 $green: #1db954;
 $light-green: #1ed760;
+
+// Font
+body {
+  box-sizing: border-box;
+  color: $white;
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.music-panel {
+  width: 80%;
+}
