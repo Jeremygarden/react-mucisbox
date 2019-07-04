@@ -1,5 +1,5 @@
 .tab-nav {
-  background-color: rgba($white, 0.1);
+  //background-color: rgba($white, 0.1);
   height: 100%;
   min-width: 220px;
   padding-top: 50px;
@@ -8,15 +8,16 @@
   width: 20%;
 }
 .tab-item {
-  padding: 0.8rem;
-  &.selected {
-    a {
+  padding: 0.5rem 0;
+  a {
+    border-left: 3px solid transparent;
+    color: rgba($white, 0.65);
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    &.active {
+      border-color: $green;
       color: $white;
     }
-  }
-  a {
-    color: rgba($white, 0.75);
-    display: block;
-    text-decoration: none;
   }
 }

@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="app">
         <div className="tab-nav">
-          <div className="tab-item selected">
+          <div className="tab-item">
             <NavLink to="/recommend" className="nav-link">
               <span>Made For You</span>
             </NavLink>
