@@ -2,9 +2,9 @@ import React, { Component } from "react";
 
 class RecommendItem extends Component {
   render() {
-    const { name, key, icons } = this.props;
+    const { name } = this.props;
     return (
-      <li className="list-item" key={key}>
+      <li className="list-item">
         <div className="list-item--wrapper">{name}</div>
       </li>
     );
