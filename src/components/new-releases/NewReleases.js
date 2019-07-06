@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import RankingItem from "./RankingItem.js";
+import NewReleasesItem from "./NewReleasesItem.js";
 import axios from "../../utils/axios";
 import "../../assets/scss/components/_lists.scss";
 
-class Ranking extends Component {
+class NewReleases extends Component {
   state = {
     authToken:
       "BQCopupVcnQmZLtgo8nJLMmSAHHAvhlhBUAi_I9WXM7gX_95OoiLZrd_CgEr7FD6IAyCXfrwqKrHUAcM3Nc",
     authorized: false,
-    category: []
+    newRelease: []
   };
   componentDidMount() {
     // const client_id = '9a7698918cf840008335042b9eb87ae3'; //'CLIENT_ID'
@@ -20,7 +20,7 @@ class Ranking extends Component {
     const token = this.state.authToken;
     console.log("TOKEN!!" + token);
     axios
-      .get(`/browse/categories`, {
+      .get(`/browse/new-releases`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -28,24 +28,26 @@ class Ranking extends Component {
         }
       })
       .then(response => {
-        const category = response.data;
+        const newReleases = response.data;
         this.setState({
-          category: [...category.categories.items]
+          newRelease: [...newReleases.albums.items]
         });
-        console.log(this.state.category);
+        console.log(this.state.newRelease);
       })
       .catch(error => {
         console.log(error);
       });
   }
 
-  getCategoryListItems() {
-    return this.state.category.map((item, index) => {
+  getNewReleasesListItems() {
+    return this.state.newRelease.map((item, index) => {
       return (
-        <RankingItem
+        <NewReleasesItem
           key={item.id + index}
           name={item.name}
-          icon={item.icons[0].url}
+          artists={item.artists[0].name}
+          image={item.images[0].url}
+          date={item.release_date}
         />
       );
     });
@@ -54,13 +56,12 @@ class Ranking extends Component {
   render() {
     console.log("yeaaaaah!!!!");
     return (
-      <div className="panel app-ranking">
-        <h1 className="panel-title">Ranking</h1>
-        <ul className="list-wrapper">{this.getCategoryListItems()}</ul>
+      <div className="panel app-new-releases">
+        <h1 className="panel-title">New Releases</h1>
+        <ul className="list-wrapper">{this.getNewReleasesListItems()}</ul>
       </div>
     );
   }
-  
 }
 
-export default Ranking;
+export default NewReleases;

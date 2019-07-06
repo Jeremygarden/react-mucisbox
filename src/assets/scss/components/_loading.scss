@@ -1,0 +1,16 @@
+.app-loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  &--wrapper {
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+  }
+}

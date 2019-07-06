@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Recommend from "./recommend/Recommend";
 import Ranking from "./ranking/Ranking";
+import NewReleases from "./new-releases/NewReleases";
 import Search from "./search/Search";
 import "../assets/scss/App.scss";
 
@@ -16,7 +17,7 @@ function App() {
     <Router>
       <div className="app">
         <div className="tab-nav">
-          <div className="tab-item selected">
+          <div className="tab-item">
             <NavLink to="/recommend" className="nav-link">
               <span>Made For You</span>
             </NavLink>
@@ -24,6 +25,11 @@ function App() {
           <div className="tab-item">
             <NavLink to="/ranking" className="nav-link">
               <span>Ranking</span>
+            </NavLink>
+          </div>
+          <div className="tab-item">
+            <NavLink to="/new-releases" className="nav-link">
+              <span>New Releases</span>
             </NavLink>
           </div>
           <div className="tab-item">
@@ -39,6 +45,7 @@ function App() {
           <Switch>
             <Route path="/recommend" component={Recommend} />
             <Route path="/ranking" component={Ranking} />
+            <Route path="/new-releases" component={NewReleases} />
             <Route path="/search" component={Search} />
             <Route component={Recommend} />
           </Switch>
