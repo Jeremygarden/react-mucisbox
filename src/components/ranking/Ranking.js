@@ -6,7 +6,7 @@ import "../../assets/scss/components/_lists.scss";
 class Ranking extends Component {
   state = {
     authToken:
-      "BQDrV-iEaK37mueUoVFxPdC9szSW6i5dF28dsJpXvitt6ttmpbRT1gv7DQJUZ9murR8wTWg1rCwNCO_z4ZE",
+      "BQCopupVcnQmZLtgo8nJLMmSAHHAvhlhBUAi_I9WXM7gX_95OoiLZrd_CgEr7FD6IAyCXfrwqKrHUAcM3Nc",
     authorized: false,
     category: []
   };
