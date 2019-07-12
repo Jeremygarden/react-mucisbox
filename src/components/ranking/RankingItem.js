@@ -6,7 +6,7 @@ class RankingItem extends Component {
     return (
       <li className="list-item">
         <div className="list-item--wrapper">
-          <img src={icon} />
+          <img src={icon} alt={name} />
           <h3>{name}</h3>
         </div>
       </li>

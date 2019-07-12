@@ -10,7 +10,16 @@
   width: 25%;
   &--wrapper {
     padding: 10px;
+    h3 {
+      color: #919496;
+      font-size: 14px;
+      line-height: 1.4;
+      &.list-item--name {
+        color: #fff;
+      }
+    }
     img {
+      margin-bottom: 10px;
       width: 100%;
     }
   }
